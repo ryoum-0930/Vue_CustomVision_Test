@@ -1,4 +1,11 @@
 const { defineConfig } = require('@vue/cli-service')
 module.exports = defineConfig({
-  transpileDependencies: true
+    transpileDependencies: true
 })
+module.exports = {
+    pwa: {
+        workboxOptions: {
+            exclude: [/\.map$/, /web\.config$/],
+        },
+    },
+};
